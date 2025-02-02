@@ -40,12 +40,18 @@ add_executable(Embarcatech_Interruption Embarcatech_Interruption.c )
 pico_set_program_name(Embarcatech_Interruption "Embarcatech_Interruption")
 pico_set_program_version(Embarcatech_Interruption "0.1")
 
+# Generate PIO header
+pico_generate_pio_header(Embarcatech_Interruption ${CMAKE_CURRENT_LIST_DIR}/ws2818b.pio)
+
+
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(Embarcatech_Interruption 0)
-pico_enable_stdio_usb(Embarcatech_Interruption 0)
+pico_enable_stdio_usb(Embarcatech_Interruption 1)
 
 # Add the standard library to the build
 target_link_libraries(Embarcatech_Interruption
+        hardware_timer
+        hardware_pio
         pico_stdlib)
 
 # Add the standard include files to the build
@@ -55,8 +61,9 @@ target_include_directories(Embarcatech_Interruption PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(Embarcatech_Interruption 
-        
-        )
+        hardware_timer
+        hardware_pio 
+        pico_stdlib )
 
 pico_add_extra_outputs(Embarcatech_Interruption)
 

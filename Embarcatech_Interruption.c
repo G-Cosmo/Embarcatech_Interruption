@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "led_matrix.h"     //biblioteca que inclui as bibliotecas e funções necessárias para manipulação da matriz de led
+#include "hardware/timer.h"
+
 
 const uint ledPin_Red = 12;
 #define times_per_second 5
