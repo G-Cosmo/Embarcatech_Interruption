@@ -1,8 +1,8 @@
 # Embarcatech_Interruption
 Repositório criado para a tarefa relacionada a interrupção com push button e matriz de leds.
 
-O programa implementa um contador utilizando a matriz de leds ws2818b presente na placa BitDogLab
-cada vez que o botão A é pressionado o contador é incrementado em 1 e cada vez que o botão B é pressionado
+O programa implementa um contador utilizando a matriz de leds ws2818b presente na placa BitDogLab.
+Cada vez que o botão A é pressionado o contador é incrementado em 1 e cada vez que o botão B é pressionado
 o contador é decrementado em 1. Além disso, o led rgb pisca na cor vermelha 5 vezes por segundo.
 
 # Instruções de compilação
