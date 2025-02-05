@@ -172,15 +172,6 @@ void npWrite()
     }
 }
 
-/*
-int frame0[5][5]= {
-                {0, 1, 1, 1, 0},
-                {0, 1, 0, 1, 0},
-                {0, 1, 0, 1, 0},
-                {0, 1, 0, 1, 0},
-                {0, 1, 1, 1, 0}
-                }; */
-
 void print_frame(int frame[5][5], float red_brightness, float green_brightness, float blue_brightness)
 {
     for(int linha = 0; linha < 5; linha++){
